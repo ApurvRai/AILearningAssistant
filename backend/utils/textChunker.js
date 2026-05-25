@@ -163,9 +163,9 @@ export const findRelevantChunks = (chunks, query, maxChunks = 3) => {
     }));
   }
 
-  const scoredChunks = chunks.map((chunk) => {
+  const scoredChunks = chunks.map((chunk, index) => {
     const chunkText = chunk.content.toLowerCase();
-    const contentWords = content.split(/\s+/).length;
+    const contentWords = chunk.content.split(/\s+/).length;
     let score = 0;
 
     for (const keyword of queryKeywords) {
