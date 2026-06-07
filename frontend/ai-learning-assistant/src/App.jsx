@@ -17,10 +17,10 @@ import QuizTakePage from "./pages/Quizzes/QuizTakePage";
 import QuizResultPage from "./pages/Quizzes/QuizResultPage";
 import FlashcardPage from "./pages/Flashcards/FlashcardPage";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
+import { useAuth } from "./context/AuthContext";
 
 const App = () => {
-  const isAuthenticated = true; // Placeholder for authentication logic
-  const loading = false; // Placeholder for loading state
+  const { isAuthenticated, loading } = useAuth();
 
   if (loading) {
     return (
