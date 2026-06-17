@@ -25,7 +25,7 @@ export const chunkText = (text, chunkSize = 500, overlap = 50) => {
     .filter((p) => p.trim().length > 0);
 
   const chunks = [];
-  let currentChunk = "";
+  let currentChunk = [];
   let currentChunkWordCount = 0;
   let chunkIndex = 0;
 
