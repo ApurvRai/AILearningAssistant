@@ -28,7 +28,8 @@ export const API_PATHS = {
 
   FLASHCARDS: {
     GET_ALL_FLASHCARD_SETS: "/api/flashcards",
-    GET_FLASHCARD_FOR_DOC: (documentId) => `/api/flashcards/${documentId}`,
+    GET_ALL_FLASHCARD_FOR_DOCUMENT: (documentId) =>
+      `/api/flashcards/${documentId}`,
     REVIEW_FLASHCARD: (cardId) => `/api/flashcards/${cardId}/review`,
     TOGGLE_STAR: (cardId) => `/api/flashcards/${cardId}/star`,
     DELETE_FLASHCARD_SET: (id) => `/api/flashcards/${id}`,

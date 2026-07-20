@@ -41,7 +41,7 @@ const reviewFlashcard = async (cardId, cardIndex) => {
 
 const toggleStar = async (cardId) => {
   try {
-    const response = await axiosInstance.post(
+    const response = await axiosInstance.put(
       API_PATHS.FLASHCARDS.TOGGLE_STAR(cardId),
     );
     return response.data;

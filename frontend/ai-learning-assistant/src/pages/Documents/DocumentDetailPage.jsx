@@ -10,6 +10,8 @@ import PageHeader from "../../components/common/PageHeader";
 import Tabs from "../../components/common/Tabs";
 import ChatInterface from "../../components/chat/ChatInterface";
 import AIActions from "../../components/ai/AIActions";
+import FlashCardManager from "../../components/flashcards/FlashCardManager";
+import QuizManager from "../../components/quizzes/QuizManager";
 
 const DocumentDetailPage = () => {
   const { id } = useParams();
@@ -98,11 +100,11 @@ const DocumentDetailPage = () => {
   };
 
   const renderFlashcardsTab = () => {
-    return "renderFlashcardsTab";
+    return <FlashCardManager documentId={id} />;
   };
 
   const renderQuizzesTab = () => {
-    return "renderQuizzesTab";
+    return <QuizManager documentId={id} />;
   };
 
   const tabs = [
