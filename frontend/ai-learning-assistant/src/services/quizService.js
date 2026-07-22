@@ -12,7 +12,7 @@ const getQuizzesForDocument = async (documentId) => {
   }
 };
 
-const getQuizNyId = async (quizId) => {
+const getQuizById = async (quizId) => {
   try {
     const response = await axiosInstance.get(
       API_PATHS.QUIZZES.GET_QUIZ_BY_ID(quizId),
@@ -59,7 +59,7 @@ const deleteQuiz = async (quizId) => {
 
 const quizService = {
   getQuizzesForDocument,
-  getQuizNyId,
+  getQuizById,
   submitQuiz,
   getQuizResults,
   deleteQuiz,

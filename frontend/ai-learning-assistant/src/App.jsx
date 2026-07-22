@@ -61,7 +61,7 @@ const App = () => {
             element={<FlashcardPage />}
           />
           <Route path="/quizzes/:quizId" element={<QuizTakePage />} />
-          <Route path="/quizzes/:quizId/result" element={<QuizResultPage />} />
+          <Route path="/quizzes/:quizId/results" element={<QuizResultPage />} />
         </Route>
       </Routes>
     </Router>
