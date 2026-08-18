@@ -57,7 +57,7 @@ const App = () => {
           <Route path="/documents/:id" element={<DocumentDetailPage />} />
           <Route path="/flashcards" element={<FlashcardListPage />} />
           <Route
-            path="/flashcards/:id/flashcards"
+            path="/documents/:id/flashcards"
             element={<FlashcardPage />}
           />
           <Route path="/quizzes/:quizId" element={<QuizTakePage />} />
