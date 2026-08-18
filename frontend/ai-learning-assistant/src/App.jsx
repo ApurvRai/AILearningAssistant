@@ -56,10 +56,7 @@ const App = () => {
           <Route path="/documents" element={<DocumentListPage />} />
           <Route path="/documents/:id" element={<DocumentDetailPage />} />
           <Route path="/flashcards" element={<FlashcardListPage />} />
-          <Route
-            path="/documents/:id/flashcards"
-            element={<FlashcardPage />}
-          />
+          <Route path="/documents/:id/flashcards" element={<FlashcardPage />} />
           <Route path="/quizzes/:quizId" element={<QuizTakePage />} />
           <Route path="/quizzes/:quizId/results" element={<QuizResultPage />} />
         </Route>
