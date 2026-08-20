@@ -12,11 +12,11 @@ import {
 } from "lucide-react";
 
 const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
-  const { logOut } = useAuth();
+  const { logout } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    logOut();
+    logout();
     navigate("/login");
   };
 

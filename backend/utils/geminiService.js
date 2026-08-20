@@ -228,6 +228,13 @@ export const chatWithContext = async (question, chunks) => {
     return generatedText;
   } catch (error) {
     console.error("Gemini API Error:", error);
+    if (error.status === 401 || error.status === 403) {
+      const configurationError = new Error(
+        "Gemini API authentication failed. Replace GEMINI_API_KEY.",
+      );
+      configurationError.statusCode = 502;
+      throw configurationError;
+    }
     throw new Error("Failed to generate chat response");
   }
 };
